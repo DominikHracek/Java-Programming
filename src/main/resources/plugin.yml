@@ -1,0 +1,6 @@
+name: MyFirstPlugin
+version: '${project.version}'
+main: me.khakis.myfirstplugin.MyFirstPlugin
+api-version: 1.18
+authors: [ Khakis ]
+description: My First Plugin
