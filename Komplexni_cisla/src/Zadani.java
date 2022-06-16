@@ -4,75 +4,72 @@ public class Zadani{
 	
 	Scanner scanner = new Scanner(System.in);
 	
+	
+	
 	Zadani(){
-		
+
 		System.out.println("Zapiste REALNE SLOZKY, pokud neznate, stisknete Enter: ");
 		System.out.println("R: ");
-		double rhodnota_R = scanner.nextDouble();
+		String rhodnota_R = scanner.nextLine();
 		System.out.println("f: ");
-		double rhodnota_f = scanner.nextDouble();
+		String rhodnota_f = scanner.nextLine();
 		System.out.println("UR: ");
-		double rhodnota_UR = scanner.nextDouble();
+		String rhodnota_UR = scanner.nextLine();
 		System.out.println("UL: ");
-		double rhodnota_UL = scanner.nextDouble();
+		String rhodnota_UL = scanner.nextLine();
 		System.out.println("UC: ");
-		double rhodnota_UC = scanner.nextDouble();
+		String rhodnota_UC = scanner.nextLine();
 		System.out.println("U: ");
-		double rhodnota_U = scanner.nextDouble();
+		String rhodnota_U = scanner.nextLine();
 		System.out.println("I: ");
-		double rhodnota_I = scanner.nextDouble();
+		String rhodnota_I = scanner.nextLine();
 		System.out.println("IR: ");
-		double rhodnota_IR = scanner.nextDouble();
+		String rhodnota_IR = scanner.nextLine();
 		System.out.println("IL: ");
-		double rhodnota_IL = scanner.nextDouble();
+		String rhodnota_IL = scanner.nextLine();
 		System.out.println("IC: ");
-		double rhodnota_IC = scanner.nextDouble();
+		String rhodnota_IC = scanner.nextLine();
 		System.out.println("S: ");
-		double rhodnota_S = scanner.nextDouble();
+		String rhodnota_S = scanner.nextLine();
 		System.out.println("P: ");
-		double rhodnota_P = scanner.nextDouble();
+		String rhodnota_P = scanner.nextLine();
 		
 		System.out.println("Zapiste IMAGINARNI SLOZKY, pokud neznate, stisknete Enter: ");
 		System.out.println("UR: ");
-		double ihodnota_UR = scanner.nextDouble();
+		String ihodnota_UR = scanner.nextLine();
 		System.out.println("UL: ");
-		double ihodnota_UL = scanner.nextDouble();
+		String ihodnota_UL = scanner.nextLine();
 		System.out.println("UC: ");
-		double ihodnota_UC = scanner.nextDouble();
+		String ihodnota_UC = scanner.nextLine();
 		System.out.println("U: ");
-		double ihodnota_U = scanner.nextDouble();
+		String ihodnota_U = scanner.nextLine();
 		System.out.println("I: ");
-		double ihodnota_I = scanner.nextDouble();
+		String ihodnota_I = scanner.nextLine();
 		System.out.println("IR: ");
-		double ihodnota_IR = scanner.nextDouble();
+		String ihodnota_IR = scanner.nextLine();
 		System.out.println("IL: ");
-		double ihodnota_IL = scanner.nextDouble();
+		String ihodnota_IL = scanner.nextLine();
 		System.out.println("IC: ");
-		double ihodnota_IC = scanner.nextDouble();
+		String ihodnota_IC = scanner.nextLine();
 		System.out.println("S: ");
-		double ihodnota_S = scanner.nextDouble();
+		String ihodnota_S = scanner.nextLine();
 		System.out.println("Q: ");
-		double ihodnota_Q = scanner.nextDouble();
+		String ihodnota_Q = scanner.nextLine();
 		
 		System.out.println("Je to správně?");
-		System.out.println("R: "+rhodnota_R);
-		System.out.println("f: "+rhodnota_f);
-		System.out.println("UR: "+rhodnota_UR+ihodnota_UR+"j");
-		System.out.println("UL: "+rhodnota_UL+ihodnota_UL+"j");
-		System.out.println("UC: "+rhodnota_UC+ihodnota_UC+"j");
-		System.out.println("U: "+rhodnota_U+ihodnota_U+"j");
-		System.out.println("I: "+rhodnota_I+ihodnota_I+"j");
-		System.out.println("IR: "+rhodnota_IR+ihodnota_IR+"j");
-		System.out.println("IL: "+rhodnota_IL+ihodnota_IL+"j");
-		System.out.println("IC: "+rhodnota_IC+ihodnota_IC+"j");
-		System.out.println("S: "+rhodnota_S+ihodnota_S+"j");
-		System.out.println("P: "+rhodnota_P);
-		System.out.println("Q: "+ihodnota_Q+"j");
-		
-		
-		
-		
+		System.out.println("R: ("+rhodnota_R+") Ω");
+		System.out.println("f: ("+rhodnota_f+") Hz");
+		System.out.println("UR: ("+rhodnota_UR+" + "+ihodnota_UR+"j) V");
+		System.out.println("UC: ("+rhodnota_UC+" + "+ihodnota_UC+"j) V");
+		System.out.println("UL: ("+rhodnota_UL+" + "+ihodnota_UL+"j) V");
+		System.out.println("U: ("+rhodnota_U+" + "+ihodnota_U+"j) V");
+		System.out.println("I: ("+rhodnota_I+" + "+ihodnota_I+"j) A");
+		System.out.println("IR: ("+rhodnota_IR+" + "+ihodnota_IR+"j) A");
+		System.out.println("IL: ("+rhodnota_IL+" + "+ihodnota_IL+"j) A");
+		System.out.println("IC: ("+rhodnota_IC+" + "+ihodnota_IC+"j) A");
+		System.out.println("S: ("+rhodnota_S+" + "+ihodnota_S+"j) VA");
+		System.out.println("P: "+rhodnota_P+" W");
+		System.out.println("Q: "+ihodnota_Q+"j) var");
 		
 	}
-		
 }
