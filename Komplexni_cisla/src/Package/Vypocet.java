@@ -38,97 +38,108 @@ public class Vypocet{
 		vysledek_R.setForeground(Color.white);
 		vysledek_R.setBackground(Color.black);
 		vysledek_R.setCaretColor(Color.white);
-		vysledek_R.setText("vysledek R: "+Zadani.hodnota_R.getText());
+		if(!vysledek_R.equals(null)){
+			vysledek_R.setText("R: "+vysledek_R);
+		}
+		else if(!Zadani.hodnota_R.equals(null)){
+			vysledek_R.setText("R: "+Zadani.R);
+		}
+		else((!Zadani.hodnota_rZ.equals(null)||!Zadani.hodnota_iZ.equals(null))&&(!Zadani.hodnota_Xl.equals(null))&&(!Zadani.hodnota_Xc.equals(null))){
+			vysledek_R.setText("R: "+Zadani.rZ+((Zadani.iZ+Zadani.Xc-Zadani.Xl)+" j"));
+		}
 		
 		vysledek_f = new JTextField();
 		vysledek_f.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_f.setForeground(Color.white);
 		vysledek_f.setBackground(Color.black);
 		vysledek_f.setCaretColor(Color.white);
-		vysledek_f.setText("vysledek f: "+Zadani.hodnota_f.getText()+" Hz");
+		if(!Zadani.hodnota_f.equals(null)){
+			vysledek_f.setText("f: "+Zadani.f);
+		}
+		else{
+			vysledek_f.setText("f: "+(1/(2*PI*Zadani.f*Zadani.C*(1/1000000))));
+		}
 		
 		vysledek_Z = new JTextField();
 		vysledek_Z.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_Z.setForeground(Color.white);
 		vysledek_Z.setBackground(Color.black);
 		vysledek_Z.setCaretColor(Color.white);
-		vysledek_Z.setText("vysledek Z: "+Zadani.hodnota_rZ.getText()+" + "+Zadani.hodnota_iZ.getText()+" j");
+		vysledek_Z.setText("Výsledek Z: "+Zadani.rZ+" + "+Zadani.iZ+" j");
 		
 		vysledek_Y = new JTextField();
 		vysledek_Y.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_Y.setForeground(Color.white);
 		vysledek_Y.setBackground(Color.black);
 		vysledek_Y.setCaretColor(Color.white);
-		vysledek_Y.setText("vysledek Y: "+Zadani.hodnota_rY.getText()+" + "+Zadani.hodnota_iY.getText()+" j");
+		vysledek_Y.setText("Výsledek Y: "+Zadani.rY+" + "+Zadani.iY+" j");
 		
 		vysledek_C = new JTextField();
 		vysledek_C.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_C.setForeground(Color.white);
 		vysledek_C.setBackground(Color.black);
 		vysledek_C.setCaretColor(Color.white);
-		vysledek_C.setText("vysledek C: "+Zadani.hodnota_C.getText()+" μF");
+		vysledek_C.setText("Výsledek C: "+Zadani.C+" μF");
 		
 		vysledek_L = new JTextField();
 		vysledek_L.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_L.setForeground(Color.white);
 		vysledek_L.setBackground(Color.black);
 		vysledek_L.setCaretColor(Color.white);
-		vysledek_L.setText("vysledek L: "+Zadani.hodnota_L.getText());
+		vysledek_L.setText("Výsledek L: "+Zadani.L);
 		
 		vysledek_U = new JTextField();
 		vysledek_U.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_U.setForeground(Color.white);
 		vysledek_U.setBackground(Color.black);
 		vysledek_U.setCaretColor(Color.white);
-		vysledek_U.setText("vysledek U: "+Zadani.hodnota_rU.getText()+" + "+Zadani.hodnota_iU.getText()+" j");
+		vysledek_U.setText("Výsledek U: "+Zadani.rU+" + "+Zadani.iU+" j");
 		
 		vysledek_I = new JTextField();
 		vysledek_I.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_I.setForeground(Color.white);
 		vysledek_I.setBackground(Color.black);
 		vysledek_I.setCaretColor(Color.white);
-		vysledek_I.setText("vysledek I: "+Zadani.hodnota_rI.getText()+" + "+Zadani.hodnota_iI.getText()+" j");
+		vysledek_I.setText("Výsledek I: "+Zadani.rI+" + "+Zadani.iI+" j");
 		
 		vysledek_S = new JTextField();
 		vysledek_S.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_S.setForeground(Color.white);
 		vysledek_S.setBackground(Color.black);
 		vysledek_S.setCaretColor(Color.white);
-		vysledek_S.setText("vysledek S: "+Zadani.hodnota_rS.getText()+" + "+Zadani.hodnota_iS.getText()+" j");
+		vysledek_S.setText("Výsledek S: "+Zadani.rS+" + "+Zadani.iS+" j");
 		
 		vysledek_P = new JTextField();
 		vysledek_P.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_P.setForeground(Color.white);
 		vysledek_P.setBackground(Color.black);
 		vysledek_P.setCaretColor(Color.white);
-		vysledek_P.setText("vysledek P: "+Zadani.hodnota_P.getText());
+		vysledek_P.setText("Výsledek P: "+Zadani.P);
 				
 		vysledek_Xc = new JTextField();
 		vysledek_Xc.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_Xc.setForeground(Color.white);
 		vysledek_Xc.setBackground(Color.black);
 		vysledek_Xc.setCaretColor(Color.white);
-		if(Zadani.Xc != null)
-		{
-			vysledek_Xc.setText("vysledek Xc: "+(1/(2*PI*Zadani.f*Zadani.C*(1/1000000))));
+		if(Zadani.hodnota_Xc.equals(null)){
+			vysledek_Xc.setText("Xc: "+(1/(2*PI*Zadani.f*Zadani.C*(1/1000000))));
 		}
 		else{
-			vysledek_Xc.setText("Vysledek Xc: "+Zadani.Xc);
+			vysledek_Xc.setText("Xc: "+Zadani.Xc);
 		}
-		
 		vysledek_Xl = new JTextField();
 		vysledek_Xl.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_Xl.setForeground(Color.white);
 		vysledek_Xl.setBackground(Color.black);
 		vysledek_Xl.setCaretColor(Color.white);
-		vysledek_Xl.setText("vysledek Xl: "+Zadani.hodnota_Xl.getText()+" j");
+		vysledek_Xl.setText("Výsledek Xl: "+Zadani.Xl+" j");
 		
 		vysledek_Q = new JTextField();
 		vysledek_Q.setFont(new Font("Consolas",Font.PLAIN,35));
 		vysledek_Q.setForeground(Color.white);
 		vysledek_Q.setBackground(Color.black);
 		vysledek_Q.setCaretColor(Color.white);
-		vysledek_Q.setText("vysledek Q: "+Zadani.hodnota_Q.getText()+" j");
+		vysledek_Q.setText("Výsledek Q: "+Zadani.Q+" j");
 		
 		frame.add(vysledek_R);
 		frame.add(vysledek_Xl);
